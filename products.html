@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <div class="product-card fade-in fade-delay-1">
+      <div class="product-card fade-in fade-delay-1 product-previewable" data-product="demandlens" title="Double-click to preview screenshots">
         <div class="product-header" style="background:linear-gradient(135deg,#0891B2,#06B6D4)">
           <i class="fa-solid fa-chart-line"></i>
           <h3>DemandLens</h3>
@@ -76,10 +76,13 @@
             <span class="badge badge-orange">Beta — Available Now</span>
             <a href="contact.html" class="btn btn-primary btn-sm">Request Access</a>
           </div>
+          <button class="preview-hint" onclick="openLightbox('demandlens',0);event.stopPropagation()">
+            <i class="fa-solid fa-images"></i> Preview Screenshots
+          </button>
         </div>
       </div>
 
-      <div class="product-card fade-in">
+      <div class="product-card fade-in product-previewable" data-product="netsolve" title="Double-click to preview screenshots">
         <div class="product-header" style="background:linear-gradient(135deg,#7C3AED,#8B5CF6)">
           <i class="fa-solid fa-network-wired"></i>
           <h3>NetSolve</h3>
@@ -98,6 +101,9 @@
             <span class="badge badge-soon">Coming Soon</span>
             <a href="contact.html" class="btn btn-outline btn-sm">Register Interest</a>
           </div>
+          <button class="preview-hint" onclick="openLightbox('netsolve',0);event.stopPropagation()">
+            <i class="fa-solid fa-images"></i> Preview Screenshots
+          </button>
         </div>
       </div>
 
@@ -182,6 +188,20 @@
     <div class="footer-bottom"><p>© 2026 Optimodel Analytics. All rights reserved.</p></div>
   </div>
 </footer>
+<!-- ── Product Screenshot Lightbox ─────────────────────────── -->
+<div id="product-lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Product screenshot viewer">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-arrow lightbox-prev" onclick="lightboxNav(-1)" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="lightbox-arrow lightbox-next" onclick="lightboxNav(1)" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption">
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+      <p id="lightbox-caption-text"></p>
+    </div>
+  </div>
+</div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
