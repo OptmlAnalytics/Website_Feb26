@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Optimodel Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="../img/logo.png" alt="" onerror="this.style.display='none'"><span class="nav-logo-text">Optim<span>odel</span></span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a><a href="community.html">Community</a><a href="training.html">Training</a>
+    <a href="consulting.html">Advisory</a><a href="templates.html">Templates</a><a href="products.html">Products</a>
+    <a href="about.html">About</a><a href="contact.html" class="nav-cta">Join Now</a>
+  </div>
+  <button class="nav-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+</nav>
+
+<section class="page-hero" style="padding-bottom:3rem">
+  <div class="container">
+    <span class="eyebrow" style="color:rgba(234,88,12,.9)"><i class="fa-solid fa-envelope"></i> &nbsp;Get in Touch</span>
+    <h1>Let's Talk.</h1>
+    <p>Whether you need advisory, team training, community membership, or just want to explore — we'd love to hear from you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info fade-in">
+        <h3>Contact Details</h3>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div><p><a href="mailto:contact@optmlanalytics.com">contact@optmlanalytics.com</a></p></div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <div><p><a href="#" target="_blank">linkedin.com/company/optimodel</a></p></div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><p>Global Remote-First Team<br>Headquartered in Delhi NCR, India</p></div>
+        </div>
+        <div class="divider" style="border-color:rgba(255,255,255,.15)"></div>
+        <h3 style="margin-bottom:1rem">Quick Enquiries</h3>
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <a href="mailto:contact@optmlanalytics.com?subject=Advisory Enquiry" class="btn btn-outline-white btn-sm"><i class="fa-solid fa-handshake"></i> Advisory Enquiry</a>
+          <a href="mailto:contact@optmlanalytics.com?subject=Training Enquiry" class="btn btn-outline-white btn-sm"><i class="fa-solid fa-graduation-cap"></i> Training Enquiry</a>
+          <a href="mailto:contact@optmlanalytics.com?subject=Community Membership" class="btn btn-outline-white btn-sm"><i class="fa-solid fa-users"></i> Community Membership</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form fade-in fade-delay-1">
+        <h3>Send Us a Message</h3>
+
+        <form id="contact-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSe0IwUUf4RKl8TSoUjymLFbfORUq0jsykGuFx42SNiuXE5J_g/formResponse"
+          method="POST" target="hidden_iframe">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="entry.name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="entry.email" placeholder="your@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">I am interested in *</label>
+            <select id="interest" name="entry.interest" required>
+              <option value="">— Select one —</option>
+              <option value="consulting">Consulting & Advisory</option>
+              <option value="training">Training & Education</option>
+              <option value="community">Community Membership</option>
+              <option value="templates">Templates & Products</option>
+              <option value="finance">Finance Analytics (Upcoming)</option>
+              <option value="sustainability">Sustainability Analytics (Upcoming)</option>
+              <option value="corporate">Corporate / Enterprise Training</option>
+              <option value="partnership">Partnership / Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="org">Organisation (optional)</label>
+            <input type="text" id="org" name="entry.org" placeholder="Your company or institution">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="entry.message" placeholder="Tell us what you're looking for..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+
+        <div id="form-success" class="form-success" style="margin-top:1rem">
+          <i class="fa-solid fa-circle-check" style="font-size:2rem;margin-bottom:.75rem;display:block"></i>
+          <strong>Message sent!</strong> We'll be in touch within 2 business days.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Quick Links -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Common Questions</span>
+      <h2>What Are You Looking For?</h2>
+    </div>
+    <div class="cards-3">
+      <div class="card fade-in" style="text-align:center">
+        <div class="card-icon icon-navy" style="margin:0 auto 1rem"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Training</h3>
+        <p style="font-size:.9rem;margin-bottom:1rem">Interested in the SCAI program, corporate workshops, or cohort bootcamps?</p>
+        <a href="training.html" class="btn btn-outline btn-sm">Explore Training →</a>
+      </div>
+      <div class="card fade-in fade-delay-1" style="text-align:center">
+        <div class="card-icon icon-orange" style="margin:0 auto 1rem"><i class="fa-solid fa-handshake"></i></div>
+        <h3>Advisory</h3>
+        <p style="font-size:.9rem;margin-bottom:1rem">Need supply chain, operations, or analytics advisory for your organisation?</p>
+        <a href="consulting.html" class="btn btn-outline btn-sm">Explore Advisory →</a>
+      </div>
+      <div class="card fade-in fade-delay-2" style="text-align:center">
+        <div class="card-icon icon-teal" style="margin:0 auto 1rem"><i class="fa-solid fa-users"></i></div>
+        <h3>Community</h3>
+        <p style="font-size:.9rem;margin-bottom:1rem">Want to join the community, access templates, or explore membership tiers?</p>
+        <a href="community.html" class="btn btn-outline btn-sm">Explore Community →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<iframe name="hidden_iframe" style="display:none"></iframe>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><span class="nav-logo-text">Optim<span style="color:var(--orange)">odel</span></span><p>Building T-shaped professionals at the intersection of domain expertise, advanced analytics, and AI.</p></div>
+      <div class="footer-col"><h4>Platform</h4><ul><li><a href="community.html">Community</a></li><li><a href="training.html">Training</a></li><li><a href="consulting.html">Advisory</a></li><li><a href="templates.html">Templates</a></li><li><a href="products.html">Products</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:contact@optmlanalytics.com">contact@optmlanalytics.com</a></li><li><a href="#">LinkedIn</a></li><li>Delhi NCR, India</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Optimodel Analytics. All rights reserved.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
