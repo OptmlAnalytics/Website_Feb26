@@ -60,17 +60,21 @@ if (nlForm) {
 }
 
 /* ── Contact form (Google Forms proxy) ────────────────────────
-   Submits to hidden_iframe so user stays on page.            */
+   Uses URLSearchParams so Google Forms receives
+   application/x-www-form-urlencoded (the only format it
+   accepts from external origins).                           */
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
 if (contactForm) {
-  contactForm.addEventListener('submit', function() {
-    /* Let the browser POST naturally to the hidden iframe —
-       do NOT call preventDefault, do NOT use fetch.         */
-    setTimeout(() => {
-      contactForm.style.display = 'none';
-      if (formSuccess) formSuccess.style.display = 'block';
-    }, 800);
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const action = contactForm.getAttribute('action');
+    const body = new URLSearchParams(new FormData(contactForm));
+    fetch(action, { method: 'POST', mode: 'no-cors', body })
+      .finally(() => {
+        contactForm.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'block';
+      });
   });
 }
 
