@@ -60,19 +60,17 @@ if (nlForm) {
 }
 
 /* ── Contact form (Google Forms proxy) ────────────────────────
-   Submits to hidden iframe so user stays on page.             */
+   Submits to hidden_iframe so user stays on page.            */
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
 if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const data = new FormData(contactForm);
-    const params = new URLSearchParams(data).toString();
-    const action = contactForm.getAttribute('action');
-    fetch(action, { method: 'POST', mode: 'no-cors', body: data })
-      .catch(() => {});
-    contactForm.style.display = 'none';
-    if (formSuccess) { formSuccess.style.display = 'block'; }
+  contactForm.addEventListener('submit', function() {
+    /* Let the browser POST naturally to the hidden iframe —
+       do NOT call preventDefault, do NOT use fetch.         */
+    setTimeout(() => {
+      contactForm.style.display = 'none';
+      if (formSuccess) formSuccess.style.display = 'block';
+    }, 800);
   });
 }
 
