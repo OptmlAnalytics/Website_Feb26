@@ -545,6 +545,43 @@ p { color: var(--mid); line-height: 1.75; }
 .upcoming-banner { background: linear-gradient(135deg, #7C3AED, #6D28D9); color: var(--white); padding: .6rem 1.25rem; border-radius: 8px; display: inline-flex; align-items: center; gap: .5rem; font-size: .8rem; font-weight: 600; margin-bottom: 1rem; }
 .upcoming-banner i { font-size: .75rem; }
 
+/* ── Photo Strips & Visual Image Sections ──────────────────── */
+.visual-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .visual-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .visual-grid { grid-template-columns: 1fr; } }
+
+.visual-card { border-radius: var(--radius); overflow: hidden; position: relative; aspect-ratio: 4/3; display: block; }
+.visual-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; display: block; }
+.visual-card:hover img { transform: scale(1.05); }
+.visual-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,16,40,.8) 0%, rgba(0,16,40,.1) 55%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;
+  transition: background var(--transition);
+}
+.visual-card:hover .visual-card-overlay { background: linear-gradient(to top, rgba(0,16,40,.9) 0%, rgba(0,16,40,.2) 60%, transparent 100%); }
+.visual-card-tag { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); background: rgba(234,88,12,.15); border: 1px solid rgba(234,88,12,.3); border-radius: 100px; padding: .2rem .7rem; margin-bottom: .5rem; }
+.visual-card-overlay h4 { color: var(--white); font-size: 1.05rem; margin-bottom: .2rem; }
+.visual-card-overlay p { color: rgba(255,255,255,.7); font-size: .8rem; line-height: 1.5; }
+
+.photo-strip {
+  position: relative; overflow: hidden;
+  background: var(--navy-dark); padding: 5rem 0;
+}
+.photo-strip-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; opacity: .25;
+}
+.photo-strip .container { position: relative; z-index: 1; text-align: center; }
+.photo-strip h2 { color: var(--white); margin-bottom: 1rem; }
+.photo-strip p { color: rgba(255,255,255,.7); max-width: 560px; margin: 0 auto 2rem; }
+
+.page-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; opacity: .18; z-index: 0;
+}
+.page-hero { position: relative; }
+
 /* ── Misc Utilities ────────────────────────────────────────── */
 .divider { height: 1px; background: var(--border); margin: 2rem 0; }
 .mt-1 { margin-top: .5rem; }
