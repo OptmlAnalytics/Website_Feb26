@@ -97,6 +97,26 @@ document.querySelectorAll('.count-up').forEach(el => counterObserver.observe(el)
 
 /* ── Product Screenshot Lightbox ───────────────────────────── */
 const LIGHTBOX_DATA = {
+  optistock: [
+    { src: 'img/products/OptiStock_1.png', caption: 'Scenario Management — Upload Excel datasets, manage multiple inventory scenarios, and track optimization status. Each scenario stores 100+ SKUs across 25+ locations.' },
+    { src: 'img/products/OptiStock_3.png', caption: 'ABC-XYZ Segmentation — Automatic classification by demand velocity (A/B/C) and variability (X/Y/Z). Segment distribution chart and tailored stocking strategies per segment.' },
+    { src: 'img/products/OptiStock_4.png', caption: 'Executive Dashboard — Total inventory ($12.2M), Days of Inventory (16.3d), service level (96%), and SKU status distribution. Stacked safety vs cycle stock chart by planning period.' },
+    { src: 'img/products/OptiStock_5.png', caption: 'Algorithm Comparison — Side-by-side Simple Safety Stock vs Multi-Echelon optimization. Compare total inventory, safety stock, DOI, and CFR metrics with visual bar chart.' },
+    { src: 'img/products/OptiStock_6.png', caption: 'Inventory Glidepath — Period-by-period trend showing total inventory value and safety stock trajectory across Q1–Q4 planning horizon with period summary panel.' },
+    { src: 'img/products/OptiStock_7.png', caption: 'SKU Health Monitor — Granular view of every SKU-location with safety stock, cycle stock, DOI, and status. Filter by category, status, velocity, or search by product ID.' },
+  ],
+  routesolve: [
+    { src: 'img/products/RouteSolve_1.png', caption: 'Landing Page — Choose to load sample data or upload custom network data. Built with Google OR-Tools VRP solver, Streamlit, Plotly, and PyDeck mapping.' },
+    { src: 'img/products/RouteSolve_2.png', caption: 'Baseline Network — Interactive PyDeck map showing 8 plants (red), 12 depots (blue), 200 customers (green), and 3,066 shipments with plant-to-depot connection lanes.' },
+    { src: 'img/products/RouteSolve_3.png', caption: 'Network Statistics — Plant, depot, customer, and equipment counts. Total shipments, move type distribution, and average shipment weight KPIs with data tables below.' },
+    { src: 'img/products/RouteSolve_5.png', caption: 'Scenario Manager — Create named what-if scenarios with custom descriptions. Modify network elements, adjust volumes and cost rates, configure optimization parameters.' },
+  ],
+  accessmap: [
+    { src: 'img/products/AccessMap_1.png', caption: 'Facility Management — Upload facility master from CSV/Excel, manage facilities with zoom and isochrone buttons. Interactive Leaflet map with OpenStreetMap basemap.' },
+    { src: 'img/products/AccessMap_3.png', caption: 'Map View — All facilities plotted on an interactive map with auto-fit bounds. Supports multiple basemap styles and facility labels toggle.' },
+    { src: 'img/products/AccessMap_4.png', caption: 'Analysis Tab — Configure isochrone settings: travel mode (car, HGV, cycling, walking), band type (time or distance), and generate service area polygons with population estimates.' },
+    { src: 'img/products/AccessMap_5.png', caption: 'Scenario Comparison — Create named scenarios selecting specific facilities, run batch analysis, and compare population coverage across different network configurations.' },
+  ],
   demandlens: [
     { src: 'img/products/DemandLens_1.png', caption: 'Data Ingestion — Upload CSV or Excel demand history. Instant preview with row count, SKU count, region & channel breakdown, and promo coverage stats.' },
     { src: 'img/products/DemandLens_2.png', caption: 'Describe — One-click analysis summarises your data into key KPIs, an aggregated demand trend chart, and a demand-by-category breakdown.' },
